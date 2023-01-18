@@ -2,7 +2,7 @@ from tkinter import *
 
 # global layout
 root = Tk()
-root.geometry("330x380")
+root.geometry("258x470")
 root.title("calculatrice9000")
 expression = ""
 equation = StringVar()
@@ -17,7 +17,7 @@ def label_num():
     btns = []
     for j in range(3, 6):
         for k in range(3):
-            btns.append(Button(command=lambda i=i: button_click(i), text=i, height=3, width=5, font=10).grid(row=[j], column=[k]))
+            btns.append(Button(command=lambda i=i: button_click(i), text=i, height=3, width=5, font=14).grid(row=[j], column=[k]))
             i += 1
 
     Button(command=lambda: button_click(0), text="0", height=3, width=5, font=10).grid(row=6, column=1)
@@ -26,14 +26,14 @@ label_num()
 
 
 #operator layout
-label_equal = Button(text="=", width=5, height=3, font=10, bg='#1d9bf2', command=lambda: button_equal())
-label_plus = Button(text="+", width=5, height=3, font=10, bg='red', command=lambda: button_click("+"))
-label_minus = Button(text="-", width=5, height=3, font=10, bg="dark orange", command=lambda: button_click("-"))
-label_divide = Button(text="/", width=5, height=3, font=10, bg="dark orange", command=lambda: button_click("/"))
+label_equal = Button(text="=", width=5, height=3, font=10, bg="dark orange", command=lambda: button_equal())
+label_plus = Button(text="+", width=5, height=3, font=10, bg="dark orange", command=lambda: button_click("+"))
+label_minus = Button(text="-", width=5, height=3, font=10, bg="gray44", command=lambda: button_click("-"))
+label_divide = Button(text="/", width=5, height=3, font=10, bg="grey44", command=lambda: button_click("/"))
 label_multiply = Button(text="x", width=5, height=3, font=10, bg="dark orange", command=lambda: button_click("*"))
-label_clear = Button(text="C", width=5, height=3, font=10, bg="dark orange", command=lambda: button_clear())
-label_dot = Button(text=".", width=5, height=3, font=10, bg="dark orange", command=lambda: button_click("."))
-label_square = Button(text="sqr", width=5, height=3, font=10, bg="dark orange", command=lambda: button_square())
+label_clear = Button(text="C", width=5, height=3, font=10, bg="gray68", command=lambda: button_clear())
+label_dot = Button(text=".", width=5, height=3, font=10, bg="gray68", command=lambda: button_click("."))
+label_square = Button(text="sqr", width=5, height=3, font=10, bg="grey44", command=lambda: button_square())
 label_percentage = Button(text="%", width=5, height=3, font=10, bg="dark orange", command=lambda: button_click("//"))
 label_squareroot = Button(text="sqrt", width=5, height=3, font=10, bg="dark orange", command=lambda: button_squareroot())
 
